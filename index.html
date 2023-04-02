@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Great Indian Kitchen!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <style>
+    body, html {
+      height: 100%;
+      font-family: "Inconsolata", sans-serif;
+      background-color: #fdf5e6;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .bgimg {
+      margin-top: 100px;
+      margin-bottom: 100px;
+      background-position: center;
+      background-size: 1100px,1200px;
+      background-image: url("The Great Indian Kitchen_3.png");
+      height: 700px;
+      width: 100%;
+      background-repeat: no-repeat;
+
+      
+    }
+
+    .menu {
+      display: none;
+    }
+
+
+    #BusinessPlan {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+  #BusinessPlan h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    
+  }
+
+  #BusinessPlan p{
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-align: justify;
+    max-width: 600px;
+    column-count: 3;
+    column-gap: 20px;
+    column-rule: 5px solid orangered;
+    
+
+  }
+
+  .button {
+        display: inline-block;
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease;
+      }
+      
+  .button:hover {
+        background-color: #3e8e41;
+      }
+
+
+    
+    
+    </style>
+  </head>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#menu" class="w3-button w3-block w3-black">MENU</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#where" class="w3-button w3-block w3-black">WHERE</a>
+    </div>
+    <div class="w3-col s3">
+        <a href="#Business Plan" class="w3-button w3-block w3-black">B.PLAN</a>
+    </div>
+    <div class="w3-col s3">
+        <a href="#Contact Us" class="w3-button w3-block w3-black">CONTACT US</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-color" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">Open from 12am to 10pm, 7 days a week</span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-black">Postepu 6, 02-676, Warsaw, Poland</span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-color w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">OUR RESTAURANT</span></h5>
+    <p>The restaurant was founded by  Rohan Sahni and Anesu Mujawo. Rohan always had some complaint against every Indian restaurant he went to, and one day, an idea popped into his mind; to open up his own ideal Indian restaurant. He then found a partner as well, Anesu Mujawo, and the rest is history! </p>
+    <p>Go ahead and eat whatever you would like! Anything in your wildest dreams is possible! Try our starters to main course to desserts and drinks!</p>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>"Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new sweet.</i></p>
+      <p>The Owners</p>
+    </div>
+    <img src="data:image/jpeg;base64,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" style="width:100%;max-width:1000px" class="w3-margin-top">
+    <p><strong>Opening hours:</strong> everyday from 12am to 10pm.</p>
+    <p><strong>Address:</strong>Postepu 6, 02-676, Warsaw, Poland</p>
+  </div>
+</div>
+
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px">
+ 
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">THE MENU</span></h5>
+  
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+        <div class="w3-col s6 tablink">Eat</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+        <div class="w3-col s6 tablink">Drink</div>
+      </a>
+    </div>
+
+    <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Chicken Tikka Massala(Non Vegetarian)</h5>
+      <p class="w3-text-grey">Four grilled Chicken pieces, along with Salad and chutney 20 zl</p><br>
+      <h5>Butter Chicken (Non-Vegetarian</h5>
+      <p class="w3-text-grey">Curry made with chicken with spiced tomato and butter sauce (4 pieces) 22 zl</p>
+      <h5>Paneer Tikka Massala(Vegetarian)</h5>
+      <p class="w3-text-grey">Four pieces of Cheese, marinated and cooked in Tandoor. Served with salad and chutney 18 zl</p><br>
+    
+      <h5>Harabhara Kebab (Vegetarian)</h5>
+      <p class="w3-text-grey">Fried patties made with spinach, peas potatoes. 3 pieces. 15.50 zl</p><br>
+    
+      <h5>Dahi Kebab (Vegetarian)</h5>
+      <p class="w3-text-grey">Kebabs filled with Indian Yogurt (3 pieces) 15 zl</p><br>
+    
+      <h5>Pakoras (Vegetarian)</h5>
+      <p class="w3-text-grey">Spiced and crispy fritters. Can have Paneer, onions or no filling. (5 pieces) 10 zl</p>
+      <h5>Samosas (Vegetarian)</h5>
+      <p class="w3-text-grey">Fried Triangular-shape pastry, with ingredients of potatoes and peas. (2 pieces) 12 zl</p>
+      <h5>Samosas (Non-Vegetarian)</h5>
+      <p class="w3-text-grey">Fried Triangular-shape pastry, with ingredients of potatoes,chicken peas. (2 pieces) 15 zl</p>
+      <h5>Samosas (Vegetarian)</h5>
+      <p class="w3-text-grey">Fried Triangular-shape pastry, with ingredients of potatoes and peas. (2 pieces) 12 zl</p>
+      <h5>Dahl Makhni (Vegetarian)</h5>
+      <p class="w3-text-grey">Brown lentil including pulses and butter (300g) 18 zl</p>
+      <h5>Paneer Makhni (Vegetarian)</h5>
+      <p class="w3-text-grey">Cheese pieces served with tomatoes, cashews, spices and cream. (300g) 17 zl</p>
+      <h5>Chana Masaala (Vegetarian)</h5>
+      <p class="w3-text-grey">Curry served with chickpeas, tomatoes and onions(300g) 20 zl</p>
+      <h5>Kofta (Vegetarian)</h5>
+      <p class="w3-text-grey">Indian style meatballs served in curry. (2 pieces, 300g) 15 zl</p>
+      <h5>Pulao (Vegetarian)</h5>
+      <p class="w3-text-grey">Basmati rice cooked in spices, along with onions and peas. (250g) 18 zl</p>
+      <h5>Plain Rice (Vegetarian)</h5>
+      <p class="w3-text-grey">Basmati rice, which can be eaten along with Curry, Dahl or vegetables. (250g) 10 zl</p>
+      <h5>Naan (Vegetarian)</h5>
+      <p class="w3-text-grey">Indian style bread, to be eaten along with Curry, Dahl or vegetable (3 pieces) 12 zl</p>
+      <h5>Butter Naan (Vegetarian)</h5>
+      <p class="w3-text-grey">Indian style bread, added with butter. To be eaten along with Curry, Dahl or vegetable. (3 pieces) 14 zl</p>
+      <h5>Gulaab Jamuun (Vegetarian)</h5>
+      <p class="w3-text-grey">Fried dough balls, soaked in sweet, sticky syrupy (2 pieces) 12 zl</p>
+
+    </div>
+
+
+    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Coffee</h5>
+      <p class="w3-text-grey">Regular coffee 6.50</p><br>
+    
+      <h5>Mango Lassi</h5>
+      <p class="w3-text-grey">Blend of mango pulp, yogurt and cardammon (250ml) 6.50</p><br>
+    
+    
+      <h5>Water</h5>
+      <p class="w3-text-grey">Regular Water (250ml) 5 zl</p><br>
+    
+      <h5>Soda</h5>
+      <p class="w3-text-grey">Coke, Sprite, Fanta, etc. 6.50</p>
+    </div>  
+    <img src="https://i.ndtvimg.com/i/2017-06/drinks_650x400_71497607611.jpg" style="width:100%;max-width:1000px;margin-top:32px;">
+  </div>
+</div>
+
+<!-- Contact/Area Container -->
+<div class="w3-container" id="where" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">WHERE TO FIND US</span></h5>
+    <p>Find us in Mokotow, at Postepu 6!.</p>
+
+    <img src="pkin.jpg" class="w3-image" style="width:100%">
+    <p><span class="w3-tag">FYI!</span></p>
+    <p><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
+    <form action="submitbutton.html" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required name="People"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2020-11-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="email" placeholder="Your Email" required name="Email"</p>
+      <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+<div class="w3-container" id="BusinessPlan">
+  <div class="w3-content" style="max-width:700px">
+  <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">The Business Plan<span></h5>
+  <h5><i><strong>Mission Statement</strong></i></h5>
+  <p>Our idea is to spread the authentic, delicious taste of India, to people who seek to try Indian Cuisine. Indian Food is one of the most popular culinary art globally, with dishes varying from vegetarian to non vegetarian, allowing inclusion of people with variable dietary requirements and preferences.  Our restaurant aims to rectify problems for people with different/special dietary requirements, such as for vegetarians, and to also provide an atmosphere of inclusion for foreigners and localities.  
+
+Our target market will be generally among the Southeast Asian community, as there is a high presence of nationalities from the subcontinent. We will also aim for adventurous localities, who want to try different kinds of foods, ranging from extremely spicy to mild kinds. We are aware that Poland, especially Warsaw, is an area of multiculturalism, home to myriad ethnics and using that to our advantage will generate large amounts of profits for the business. 
+Moreover, with the growing diversity in food, we want to ensure everyone’s dietary needs are fulfilled hence we will be catering to food allergies and intolerances (e.g. dairy free), special dietary requirements (e.g. vegetarian) and religious reasons (e.g. halal). This line of business would not only be beneficiary in terms of bringing in revenue but is also aligned with our passion for cooking. 
+
+We will be the sole owners of The Indian Kitchen. Our restaurant will be inclusive, traditional  and the best in the city providing unbelievable customer service and delicious food. Apart from in house service and alcohol, deliveries will also be available. Five years from now, we hope to expand to other areas in Warsaw and Poland as a whole.
+
+
+As there are multiple Indian restaurants in Warsaw, we acknowledge that there will be fierce competition, especially in the Center. Hence, we will take great care to be at par with our competitors, and how to springboard ourselves to new heights.</p>
+<h5><i><strong>Business Structure</strong></i></h5>
+<p>Although our business might not be as big as some of the leading brands we will ensure we put the right structure in place that will support the kind of business growth we have in mind. We will hire qualified and honest people to occupy the following postions:
+  <ul>
+    <li>Restaurant manager- managing the daily activities in the restaurant ( kitchen included)</li>
+    <li>Chef\kitchen staff- in charge of preparation of cuisines</li>
+    <li>Accountant\cashier- responsible for financial transactions, reports, budgets and statements for the business</li>
+    <li>Waiters/waitress- attends to customers in a friendly and professional manner</li>
+  </ul>
+The restaurant will have the following ownership structure: 
+Both the owners will hold a 40 percent stake each and our investor will hold a 20 percent stake (the investor is later mentioned in the Sources of Finance and Pricing Strategies)</p>
+<h5><i><strong>Sources of Finance and Pricing Strategies</strong></i></h5>
+<p>Finance is the most integral part of the business. We have found an investor, who is prepared to give us 100 thousand zloty as a one time payment, and is also ready to pay three months rent. We will keep the cost of main dishes between 15-25 zloty, starters hovering around 10 zloty, and drinks in the range of 3 to 7 zloty. As the venture becomes more profitable over time, we will gradually decrease the prices. Our prices will be one of our Unique Selling Points, as our competitors have higher prices for food.
+We have also have our investor on board to pay, in full, the furniture costs.
+</p>
+<h5><i><strong>Sources of Food/Ingredients</strong></i></h5>
+<p>We have decided to buy rice, flour, and Indian spices from a food manufacturer directly. We will receive amounts of rice, flour and spices twice a week, and we have agreed on a price, which is to be paid on a monthly basis. 
+We have also decided to buy sustainable packaging materials from another manufacturer directly, which will help us be environmentally-friendly and also help us operate/pickup services.</p>
+<h5><i><strong>Target Market</strong></i></h5>
+<p>Our market is crucial for us to understand as to what customers should we primarily focus on. We will focus on many traits and qualities. We will as mentioned, of course primarily focus on adventurous localities and the Southeast Asian Diaspora in the Warsaw Metropolitan area, but will also expand our focal lenses on people who have different dietary requirements, work employees and students. Furthermore, in our current world, a business cannot succeed without the aid of technology, hence we will establish an online presence, such as on Social Media. Adding on, we understand the acute need of paying heed to the environment, so we will also strive to making our business as green as possible</p>
+<h5><i><strong>Our Menu</strong></i></h5>
+<p>
+As our menu will be widely inclusive we will serve a wide range of dishes that will include only the best quality of ingredients. All of the ingredients used and their nutritional value will be posted on our blogs for our customers to understand. In addition our packaging will consist of reusable materials such as corrugated cardboard as it is regarded as environmentally friendly.
+Moreover, we acknowledge that there are many popular dishes in the Indian cuisine, which is why we will include them. Examples are Curry (Vegetarian or Non-Vegetarian), Chicken dishes, and Breads.</p>
+<h5><i><strong>Market Research</strong></i></h5>
+<p>To aid our efforts in understanding our customers, we gave out an electronic form, and anyone could fill it. This helped us in understanding the market on a broader scale. We found out that all of our respondents had Indian food at least once in the past two months, 21 percent of people had Indian food twice in the past two months, 5 percent of people had Indian food thrice in the past two months, 2 percent of people had Indian food four times in the past two months and 18 percent of people had Indian food more than 6 times in the past two months. This gave us a correlation that people had Indian food on average, at least twice in the past two months. </p>
+<break>
+<break>
+<p>We then also asked our participants that what are their favorite dishes in the Indian Culinary arts. 53 percent of people answered Curry, 34 percent of people answered Chicken dishes, and 36 percent of people answered Breads. This gave us valuable information; we now know on what dishes to primarily focus on, and to make them of best quality.</p>
+<break>
+<break>
+<p>
+Moving further, we asked our participants if they prefer cost over quality, quality over cost or a balance. We found out that 53 percent of people prefer a balance, 45 percent of people prefer quality over cost, and 2 percent prefer cost over quality. This gave us a correlation, that we can make our dishes of best quality, and also make them less expensive, (compared to our competitors) so that customers can buy more at the same time, and enjoy equally.  We also found out that 63 percent of people prefer good quality tables and chairs, which supports our correlation to make dishes less expensive, and people can enjoy more, and also experience proper levels of comfort. 37% of people prefer not going further than 5 kilometers for an Indian restaurant, and 32 percent of people are willing to go any distance. This shows that customers will be ready to go for any lengths to have Indian food, which is why we will make it a point to invest properly in aesthetics and features such as being kid friendly (a mini playground zone, or prams) and good quality furniture, and traditional paintings over walls. By doing these small things, we can expect lots of customers, and we could perhaps become a household name.</p>
+<h5><i><strong>Marketing (Promotions)</i></strong></h5>
+<p>We, as in the owners, have decided, to open up an Instagram channel of our restaurant, as we cannot look away from the Power of Social Media. We will use Instagram as our e-marketing and promotions platform, which will help us catapult further and attract new customers. We, the owners, will run and maintain the channel. 
+</p>
+<h5><i><strong>Product and services</i></strong></h5>
+<p>All products have been mentioned above in the menu</p>
+<break>
+<p>As we are new and this is a startup, we will not intially operate delivery services, but will operate takeout immediately. When our financials will be stable, we will consider in operating a delivery service.</p>
+<h5><i><strong>Strengths and Weaknesses</strong></i></h5>
+<p>A major weakness that will be held up against us is the fact that we are a new Indian restaurant, and we are new in the game. We in the beginning do not have neither the financial capacity, nor the manpower or resources to compete against other well established Indian restaurants. Moreover, as we lack experience in operating a restaurant business in the long term, we will be needing trusted advisors to guide us on our path to success. Our competitors to name a few are Mr India, Bombaj Massala and India King, who are well established within the Southeast Asian diaspora. </p>
+<break>
+<p>Another weakness, as aforementioned, is that we are new within the Indian Restaurants business. So the beginning will pose some difficult times, but we sincerely hope that if our startup is effective, we will become a household name. </p>
+<break>
+<p>
+Our main strength is that of our price (and location), as other Indian restaurants are selling food at high costs. This will be our main aim and one of our unique selling points to attract customers. Our other USP is that we will have cooks from the Indian subcontinent. This will help our products be favored and preferred. </p>
+<break>
+<p>What’s more, is that since an Indian is a co-owner of the restaurant, this will aid in taking the venture to new goals, as he will know how to adapt the restaurant to the regular Southeast Asian’s needs. </p>
+<h5><i><strong>Location</i></strong></h5>
+<p>As aforementioned in Market Research, we have seen that 37 percent of people prefer to not travel more than 5 kilometers, and 32 percent of people are willing to travel any distance. At the same time, we need to be weary of our finances, as we are a startup, and cannot risk it. Hence, we have decided to keep our location in Mokotow, where rents are affordable whilst we follow the results of our Market Research.</p>
+<break>
+<p>
+We will have our restaurant at Postępu 6, which is an office complex. The rent of the place is 8065 zloty per month, with a service charge of 2574 zloty. Another extra strength is that of air conditioning, ease of parking (as this is a complex), elevator for the immobile, and a reception desk. Moreover, it is located near to Galeria Mokotow, and accessible to the major highways, which makes our restaurant freely accessible.</p> 
+<h5><i><strong>Financials - At A Glance</strong></i></h5>
+<p>To start off, as aforementioned, we will have 100 thousand zloty as our initial money, and our investor is prepared to give three months rent.  The following table shows a rough chart of what our finances will look like for the first month. </p>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Cost</th>
+  </tr>
+  <tr>
+    <td>One Time Payment</td>
+    <td>100000 zloty
+  </tr>
+  <tr>
+    <td>Hiring New Employees (Salaries)</td>
+    <td>-21000 zloty</td>
+  </tr>
+  <tr>
+    <td>Decorations/Aesthetics/Features</td>
+    <td>~20000 zloty, to be covered by the investor</td>
+  </tr>
+  <tr>
+    <td>Rent (to be covered by the investor)</td>
+    <td>~10k zloty</td>
+  </tr>
+  <tr>
+    <td>Sustainable Packaging</td>
+    <td>-5000 zloty</td>
+  </tr>
+  <tr>
+    <td>Ingredients/Food</td>
+    <td>-5000 zloty</td>
+  </tr>
+  <tr>
+    <td>Electricity Bills</td>
+    <td>In Between 10 and 15k zloty</td>
+  </tr>
+  <tr>
+    <td>Money in reserve</td>
+    <td>-5000 zloty</td>
+  </tr>
+  <tr>
+    <td>Forecasted Profit</td>
+    <td>15-20k zloty</td>
+  </tr>
+  <tr>
+    <td>Tax (predicted)</td>
+    <td>~2-4k zloty</td>
+  </tr>   
+  <tr>
+    <td>Final</td>
+    <td>~50000 zloty</td>
+  </tr>
+  
+  </table>
+
+</div>
+<div class="w3-container" id="Contact Us">
+    <div class="w3-content" style="max-width:700px">
+        <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Contact Us</span></h5>
+        <p>Email ID: sahni072@gmail.com</p>
+        <br>
+        <p>Phone Number: +48 576 999 306 (Rohan)</p>
+        <br>
+        <p>Phone Number: +48 535 715 093 (Anesu)</p>
+    </div>
+</div>
+<!-- End page content -->
+</div>
+
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+</body>
+</html>
