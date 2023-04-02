@@ -1,0 +1,116 @@
+<!DOCTYPE html> 
+<html lang="en">
+  <head>
+  <style>
+    div{
+      width:250px;
+      height:120px;
+      text-shadow: 10px 20px 30px aqua;
+      background-color: purple; 
+      text-align: center;
+      box-shadow: 20px 30px 30px teal;
+    }
+    #operandone{
+      border-radius: 30%;
+      font-size: 200%;
+    }
+    #operandtwo{
+      border-radius:30%;
+      font-size:200%
+    }
+    #buttonsubmit{
+      size: 200%;
+    }
+    p{
+      color:white;
+      font-size: 200%;
+    }
+    button{
+      font-size: 32px;
+      border-radius: 50%;
+    }
+    select{
+      font-size: 32px;
+      border-radius: 50%;
+    }
+    #randomiser_information{
+      font-size: 24;
+    }
+    #user_input{
+      border-radius: 30%;
+      font-size:200%;
+    }
+    #result_two{
+      font-size:200%;
+
+    }
+    
+    
+  </style>
+  </head>
+  <body style="background-image: url(BGround.gif);">
+    <center><div>
+    <h1 id="heading"><center>CALCULATOR</center></h1>
+    </div></center>
+    <p>Please fill in the blanks</p> <input type="text" id="operandone" >
+    <select id = "name" name = "name">
+      <option value = "Addition">+</option>
+      <option value = "Subtraction">-</option>
+      <option value = "Multiplication">*</option>
+      <option value = "Division">/</option><br><br>
+      </select>
+    <input type="text" id="operandtwo">
+    <button type="button" onclick="calc()" id="buttonsubmit" >=</button>
+    <label for="operations"><p>Which operation would you like to do?</p></label><br><br>
+    
+    
+    <p id="result"></p>
+    <script>
+        function calc(){
+          var operandone = document.getElementById("operandone").value
+          var operandtwo = document.getElementById("operandtwo").value
+          var operation = document.getElementById("name").value
+          var operandone = parseFloat(operandone)
+          var operandtwo = parseFloat(operandtwo)
+          switch (operation){
+            case "Addition": document.getElementById("result").innerHTML=operandone+operandtwo
+              break
+            case "Subtraction": document.getElementById("result").innerHTML=operandone-operandtwo
+              break
+            case "Multiplication": document.getElementById("result").innerHTML=operandone*operandtwo
+              break
+            case "Division": document.getElementById("result").innerHTML=operandone/operandtwo
+              break
+          }
+        }
+    </script>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <center><div><h1>Welcome to the Number Randomizer!</h1></div></center>
+    <p id="randomiser_information">The loop will run for 5 times, and you need to give a number between 1 and 6.</p>
+    <p id="randomiser_information">I will generate random numbers, which you will not know.</p>
+    <p id="randomiser_information">At the end of the game, I will tell you your score that how many times your number matched with mine.</p>
+    <br>
+    <p id="randomiser_information">Please enter a number between 1 and 6.</p>
+    <input type="text" id="user_input">
+    <button type="button" onclick="calculation()" id="buttonsubmit">Submit</button>
+    <p id="result_two"></p>
+    <p id="random"></p>
+    <script>
+      var score = 0;
+      function calculation(){
+      var value_two = document.getElementById("user_input").value;
+      value_two = parseFloat(value_two);
+      random_value = (Math.floor(Math.random()*(6)+1))
+      document.getElementById('random').innerHTML=random_value
+      if(value_two == random_value){
+        score++;
+      }
+      score = score.toString();
+      document.getElementById("result_two").innerHTML=score;
+      }
+    </script>
+  </body>
+</html>
